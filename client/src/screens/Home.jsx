@@ -12,7 +12,7 @@ export class Home extends React.PureComponent {
 					Indian Institute of Technology, Jodhpur
 				</h3>
 				<Image
-					src="/media/images/home-illustration.svg"
+					src="/media/images/computer-error.gif"
 					height="20rem"
 					width="100%"
 				/>

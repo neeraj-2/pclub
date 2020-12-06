@@ -4,9 +4,8 @@
  */
 
 const config = {
-	name: 'React Redux Saga Hot | MERN Boilerplate',
-	description:
-		'A boilerplate for mern stack which enables true hot reloading and time travel.',
+	name: 'Programming Club | IIT Jodhpur',
+	description: "A community for the student's of IIT Jodhpur.",
 };
 
 export default config;
