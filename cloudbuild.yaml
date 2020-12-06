@@ -6,6 +6,8 @@ steps:
       - "gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA"
       - "-f"
       - "Dockerfile"
+      - '--build-arg'
+      - 'OAUTH_CLIENT_ID=$_REACT_APP_CLIENT_ID'
       - "."
 
   - name: "gcr.io/cloud-builders/docker"
