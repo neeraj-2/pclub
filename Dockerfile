@@ -1,4 +1,4 @@
-FROM node:12 as build
+FROM node:14.15.1 as build
 
 WORKDIR /client
 
@@ -14,7 +14,7 @@ ENV REACT_APP_CLIENT_ID ${OAUTH_CLIENT_ID}
 
 RUN npm run build
 
-FROM node:12-alpine
+FROM node:14.15.1-alpine
 
 WORKDIR /server
 

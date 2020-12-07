@@ -14,6 +14,7 @@ import Profile from 'screens/Profile';
 
 import Header from 'components/Header';
 import SystemAlerts from 'components/SystemAlerts';
+import ScrollToTop from 'components/ScrollToTop';
 import Footer from 'components/Footer';
 
 import './App.scss';
@@ -31,13 +32,15 @@ export class App extends React.Component {
 				/>
 				<Header />
 				<div className="main">
-					<Switch>
-						<Route path="/" exact component={Home} />
-						<Route path="/articles" component={Article} />
-						<Route path="/profile" component={Profile} />
-						<Route path="/private" component={Private} />
-						<Route component={NotFound} />
-					</Switch>
+					<ScrollToTop>
+						<Switch>
+							<Route path="/" exact component={Home} />
+							<Route path="/articles" component={Article} />
+							<Route path="/profile" component={Profile} />
+							<Route path="/private" component={Private} />
+							<Route component={NotFound} />
+						</Switch>
+					</ScrollToTop>
 				</div>
 				<Footer />
 				<SystemAlerts />

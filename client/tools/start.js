@@ -102,12 +102,12 @@ choosePort(HOST, DEFAULT_PORT)
 				return;
 			}
 
-			if (isInteractive) {
-				clearConsole();
-			}
+			// if (isInteractive) {
+			// 	clearConsole();
+			// }
 
 			console.log(chalk.cyan('Starting the development server...'));
-			if (!DOCKER) openBrowser(urls.localUrlForBrowser);
+			// if (!DOCKER) openBrowser(urls.localUrlForBrowser);
 		});
 
 		['SIGINT', 'SIGTERM'].forEach((sig) => {

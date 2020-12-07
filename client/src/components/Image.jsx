@@ -12,6 +12,7 @@ const Image = ({
 	width,
 	height,
 	circle,
+	caption,
 }) => {
 	const [loaded, setLoaded] = useState(false);
 	const [error, setError] = useState(false);
@@ -47,12 +48,16 @@ const Image = ({
 				}}
 				onError={() => setError(true)}
 			/>
+			<a className="caption" href={caption.link} target="_blank">
+				{caption.label}
+			</a>
 		</div>
 	);
 };
 
 Image.propTypes = {
 	alt: PropTypes.string,
+	caption: PropTypes.object,
 	circle: PropTypes.bool,
 	clickable: PropTypes.bool,
 	height: PropTypes.string,
@@ -65,6 +70,7 @@ Image.propTypes = {
 
 Image.defaultProps = {
 	alt: 'image',
+	caption: { label: '', link: '' },
 	style: {},
 	imageStyle: {},
 	clickable: false,

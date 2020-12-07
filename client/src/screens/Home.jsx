@@ -12,9 +12,13 @@ export class Home extends React.PureComponent {
 					Indian Institute of Technology, Jodhpur
 				</h3>
 				<Image
-					src="/media/images/computer-error.gif"
+					src="/media/images/arpit-illustration.png"
 					height="20rem"
 					width="100%"
+					caption={{
+						label: '© Arpit Kumar',
+						link: 'https://www.instagram.com/arpit__kumar/',
+					}}
 				/>
 				<ArticleListPreview />
 			</div>

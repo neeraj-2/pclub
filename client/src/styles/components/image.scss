@@ -20,6 +20,13 @@
     }
   }
 
+  .caption {
+    position: absolute;
+    bottom: 0;
+    opacity: 50%;
+    font-size: small;
+  }
+
   &.circle {
     border-radius: 50%;
 
