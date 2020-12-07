@@ -43,6 +43,8 @@ const Image = ({
 		return {
 			right: (cw - (nw * ch) / nh) / 2,
 			bottom: 0,
+			transform: 'rotate(90deg)',
+			transformOrigin: 'bottom right',
 		};
 	};
 
