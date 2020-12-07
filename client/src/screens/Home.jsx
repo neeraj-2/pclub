@@ -16,7 +16,7 @@ export class Home extends React.PureComponent {
 					height="20rem"
 					width="100%"
 					caption={{
-						label: '© Arpit Kumar',
+						label: '© arpit__kumar',
 						link: 'https://www.instagram.com/arpit__kumar/',
 					}}
 				/>

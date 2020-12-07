@@ -14,8 +14,37 @@ const Image = ({
 	circle,
 	caption,
 }) => {
+	const [imageDescription, setImageDescription] = useState({
+		containerHeight: 1,
+		containerWidth: 1,
+		naturalHeight: 1,
+		naturalWidth: 1,
+	});
 	const [loaded, setLoaded] = useState(false);
 	const [error, setError] = useState(false);
+
+	const captionLocation = () => {
+		let stickingSide = 'HEIGHT';
+		const {
+			containerHeight: ch,
+			containerWidth: cw,
+			naturalHeight: nh,
+			naturalWidth: nw,
+		} = imageDescription;
+		if (cw / ch > nw / nh) {
+			stickingSide = 'WIDTH';
+		}
+		if (stickingSide === 'HEIGHT') {
+			return {
+				right: 0,
+				bottom: (ch - (nh * cw) / nw) / 2 - 24,
+			};
+		}
+		return {
+			right: (cw - (nw * ch) / nh) / 2,
+			bottom: 0,
+		};
+	};
 
 	const imageContainerStyle = circle
 		? {
@@ -24,11 +53,7 @@ const Image = ({
 				width: size,
 				height: size,
 		  }
-		: {
-				...style,
-				width,
-				height,
-		  };
+		: { ...style, width, height };
 
 	return (
 		<div
@@ -43,14 +68,33 @@ const Image = ({
 				src={error ? '/media/brand/icon.png' : src}
 				alt={alt}
 				style={imageStyle}
-				onLoad={() => {
+				onLoad={(event) => {
 					setLoaded(true);
+					const {
+						height: containerHeight,
+						width: containerWidth,
+						naturalHeight,
+						naturalWidth,
+					} = event.target;
+					setImageDescription({
+						containerHeight,
+						containerWidth,
+						naturalHeight,
+						naturalWidth,
+					});
 				}}
 				onError={() => setError(true)}
 			/>
-			<a className="caption" href={caption.link} target="_blank">
-				{caption.label}
-			</a>
+			{caption?.label && (
+				<a
+					className="caption"
+					href={caption.link}
+					target="_blank"
+					style={captionLocation()}
+				>
+					{caption.label}
+				</a>
+			)}
 		</div>
 	);
 };
