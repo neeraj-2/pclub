@@ -11,6 +11,7 @@ import Private from 'screens/Private';
 import Article from 'screens/Article';
 import NotFound from 'screens/NotFound';
 import Profile from 'screens/Profile';
+import IDE from 'screens/IDE';
 
 import Header from 'components/Header';
 import SystemAlerts from 'components/SystemAlerts';
@@ -36,6 +37,7 @@ export class App extends React.Component {
 						<Switch>
 							<Route path="/" exact component={Home} />
 							<Route path="/articles" component={Article} />
+							<Route path="/ide" component={IDE} />
 							<Route path="/profile" component={Profile} />
 							<Route path="/private" component={Private} />
 							<Route component={NotFound} />

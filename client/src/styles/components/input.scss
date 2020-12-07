@@ -7,4 +7,12 @@
   border: none;
   outline: none;
   background-color: transparent;
+  
+  &::-webkit-resizer {
+    display: none;
+
+    border: 8px solid transparent;
+    border-bottom-color: $gray;
+    border-right-color: $gray;
+  }
 }

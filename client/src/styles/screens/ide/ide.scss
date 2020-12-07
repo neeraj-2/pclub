@@ -1,0 +1,23 @@
+.ide-container {
+	height: 80vh;
+	.title {
+		font-size: 2rem;
+		margin: 1rem 0;
+	}
+	.inp {
+		font-size: 18px;
+		border: 2px dashed $gray;
+		width: calc(100% - 1rem);
+		resize: none;
+
+		&.code-text, &.output-text {
+			flex-grow: 1;
+		}
+		&.input-text {
+			resize: vertical;
+		}
+	}
+	& > * { 
+		margin: 2rem;
+	}
+}

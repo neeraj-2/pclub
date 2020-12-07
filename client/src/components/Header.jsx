@@ -35,6 +35,11 @@ const Header = ({ isAuthenticated }) => {
 			text: 'Articles',
 			privateRoute: false,
 		},
+		{
+			to: '/ide',
+			text: 'IDE',
+			privateRoute: false,
+		},
 	];
 	const linksToDisplay = links.filter(
 		({ privateRoute }) => !privateRoute || isAuthenticated,
