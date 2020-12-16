@@ -9,6 +9,7 @@ const httpStatus = require('http-status');
 const expressValidation = require('express-validation');
 const expressLogger = require('./winston');
 const helmet = require('helmet');
+const path = require('path');
 const routes = require('../index.route');
 const config = require('./config');
 const APIError = require('../server/helpers/APIError');
@@ -53,6 +54,10 @@ app.use('/api', routes);
 
 // react client
 app.use(express.static('build'));
+// fallback to index.html
+app.use('*', (req, res) => {
+	res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
+});
 
 // if error is not an instanceOf APIError, convert it.
 app.use((err, req, res, next) => {
