@@ -19,6 +19,8 @@ import ScrollToTop from 'components/ScrollToTop';
 import Footer from 'components/Footer';
 
 import './App.scss';
+import AboutUs from 'screens/AboutUs';
+import TeamPage from 'screens/Team';
 
 export class App extends React.Component {
 	render() {
@@ -38,6 +40,8 @@ export class App extends React.Component {
 							<Route path="/" exact component={Home} />
 							<Route path="/articles" component={Article} />
 							<Route path="/ide" component={IDE} />
+							<Route path="/About" component={AboutUs} />
+							<Route path="/Team" component={TeamPage} />
 							<Route path="/profile" component={Profile} />
 							<Route path="/private" component={Private} />
 							<Route component={NotFound} />

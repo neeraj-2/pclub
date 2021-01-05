@@ -12,5 +12,6 @@
   "parser" : "babel",
   "requirePragma" : false,
   "insertPragma" : false,
+  "endOfLine": "auto",
   "proseWrap" : "preserve"
 }
