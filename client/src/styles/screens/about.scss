@@ -1,0 +1,33 @@
+.about-container{
+	padding: 3rem;
+}
+.inner-container-1{
+	align-items: center;
+	margin-bottom: 4rem;
+}
+
+.inner-container-2{
+	align-items: center;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	margin:5rem 0rem 5rem 0rem;
+}
+
+.text{
+	font-size: 1.16rem;
+}
+
+.right-container{
+	width: 25rem;
+	flex-direction: column;
+	align-content: space-between;
+}
+
+.open-team-button{
+margin-top: 1rem;
+width: 10rem;
+}
+
+.Timeline{
+justify-content: center;
+}
