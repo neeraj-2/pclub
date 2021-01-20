@@ -37,6 +37,7 @@ body {
 @import "components/link";
 @import "components/alerts";
 @import "components/login";
+@import "components/TeamMember";
 
 @import "theme";
 
@@ -48,4 +49,5 @@ body {
 @import "screens/not-found";
 @import "screens/articles";
 @import "screens/ide";
-@import "screens/about"
+@import "screens/about";
+@import "screens/Teampage";
